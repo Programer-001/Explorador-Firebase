@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="5" x2="56" y2="59" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1597F4"/>
+      <stop offset="1" stop-color="#0644A8"/>
+    </linearGradient>
+    <linearGradient id="folder" x1="14" y1="16" x2="49" y2="49" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD82F"/>
+      <stop offset="1" stop-color="#FFA000"/>
+    </linearGradient>
+  </defs>
+
+  <!-- fondo -->
+  <rect x="3" y="3" width="58" height="58" rx="14" fill="url(#bg)"/>
+
+  <!-- carpeta -->
+  <path d="M11 20c0-2.2 1.8-4 4-4h11l4.5 5H49c2.2 0 4 1.8 4 4v22
+           c0 2.8-2.2 5-5 5H16c-2.8 0-5-2.2-5-5V20z"
+        fill="url(#folder)"/>
+  <path d="M11 27h42v4H11z" fill="#FFF4C5"/>
+
+  <!-- nube claramente definida -->
+  <path d="M25 53
+           C19.5 53 16 49.6 16 45.2
+           C16 41.3 18.9 38.1 22.8 37.5
+           C24.2 31.9 28.9 28 34.5 28
+           C40.6 28 45.6 32.6 46.3 38.5
+           C51.1 38.7 55 41.8 55 46
+           C55 50 51.5 53 47 53
+           Z"
+        fill="#F7FBFF" stroke="#D8E9F8" stroke-width="1"/>
+
+  <!-- flecha de subida -->
+  <path d="M35 49V40.5h-4.5L38 33l7.5 7.5H41V49z"
+        fill="#0B5ED7"/>
+</svg>

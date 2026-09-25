@@ -1,0 +1,197 @@
+/* =========================================
+   TEMA GENERAL - MODO CLARO
+========================================= */
+
+:root {
+  /* Fondo general */
+  --bg: #ffffff;
+  --surface: #f5f5f5;
+  --surface-2: #ffffff;
+
+  /* Textos */
+  --text: #222222;
+  --text-secondary: #666666;
+
+  /* Bordes */
+  --border: #cccccc;
+
+  /* Inputs */
+  --input-bg: #ffffff;
+  --input-text: #222222;
+
+  /* Elemento / carpeta seleccionada */
+  --selected-bg: #fff3cd;
+  --selected-text: #3d3000;
+  --selected-border: #e6c85c;
+
+  /* Campos de solo lectura */
+  --readonly-bg: #f1f1f1;
+  --readonly-text: #222222;
+  --readonly-border: #cccccc;
+
+  /* Tipografía */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+
+  color: var(--text);
+  background: var(--bg);
+
+  color-scheme: light;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* =========================================
+   MODO OSCURO AUTOMÁTICO
+========================================= */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Fondo general */
+    --bg: #121318;
+    --surface: #181a1f;
+    --surface-2: #25272d;
+
+    /* Textos */
+    --text: #ffffff;
+    --text-secondary: #c7c7c7;
+
+    /* Bordes */
+    --border: #3b3e46;
+
+    /* Inputs */
+    --input-bg: #25272d;
+    --input-text: #ffffff;
+
+    /* Elemento / carpeta seleccionada */
+    --selected-bg: #5c4700;
+    --selected-text: #ffe082;
+    --selected-border: #8c7000;
+
+    /* Campos de solo lectura */
+    --readonly-bg: #25272d;
+    --readonly-text: #ffffff;
+    --readonly-border: #454850;
+
+    color-scheme: dark;
+  }
+}
+
+
+/* =========================================
+   BASE
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  margin: 0;
+
+  min-width: 320px;
+  min-height: 100vh;
+
+  background: var(--bg);
+  color: var(--text);
+}
+
+
+#root {
+  display: block;
+}
+
+
+/* =========================================
+   TEXTOS
+========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text);
+}
+
+
+p,
+span,
+label {
+  color: inherit;
+}
+
+
+/* =========================================
+   FORMULARIOS
+========================================= */
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+
+input,
+textarea,
+select {
+  background: var(--input-bg);
+  color: var(--input-text);
+
+  border-color: var(--border);
+}
+
+
+/* =========================================
+   CAMPOS SOLO LECTURA
+========================================= */
+
+input:read-only,
+textarea:read-only {
+  background: var(--readonly-bg);
+  color: var(--readonly-text);
+
+  border-color: var(--readonly-border);
+}
+
+
+/* =========================================
+   CLASE PARA ELEMENTOS SELECCIONADOS
+========================================= */
+
+.selected-item {
+  background: var(--selected-bg) !important;
+  color: var(--selected-text) !important;
+
+  border-color: var(--selected-border) !important;
+}
+
+
+/* =========================================
+   SELECCIÓN DE TEXTO
+========================================= */
+
+::selection {
+  background: var(--selected-bg);
+  color: var(--selected-text);
+}

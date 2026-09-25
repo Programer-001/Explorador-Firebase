@@ -1,0 +1,206 @@
+/* ================================
+   COLORES - MODO CLARO
+================================ */
+
+:root {
+  --app-bg: #ffffff;
+  --app-text: #222222;
+
+  --nav-bg: #f5f5f5;
+  --nav-border: #cccccc;
+
+  --nav-btn-bg: #ffffff;
+  --nav-btn-text: #000000;
+  --nav-btn-border: #cccccc;
+
+  --nav-active-bg: #007bff;
+  --nav-active-text: #ffffff;
+
+  --nav-email: #666666;
+
+  --logout-bg: #ffffff;
+  --logout-text: #b42318;
+  --logout-border: #dddddd;
+}
+
+
+/* ================================
+   COLORES - MODO OSCURO
+================================ */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --app-bg: #121318;
+    --app-text: #ffffff;
+
+    --nav-bg: #181a1f;
+    --nav-border: #383b42;
+
+    --nav-btn-bg: #25272d;
+    --nav-btn-text: #ffffff;
+    --nav-btn-border: #454850;
+
+    --nav-active-bg: #007bff;
+    --nav-active-text: #ffffff;
+
+    --nav-email: #dddddd;
+
+    --logout-bg: #25272d;
+    --logout-text: #ff6b6b;
+    --logout-border: #454850;
+  }
+}
+
+
+/* ================================
+   APP
+================================ */
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+
+  font-family: Arial, sans-serif;
+
+  background: var(--app-bg);
+  color: var(--app-text);
+}
+
+
+/* ================================
+   NAVBAR
+================================ */
+
+.app-navbar {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 10px;
+
+  background: var(--nav-bg);
+
+  border-bottom:
+    1px solid var(--nav-border);
+
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   BOTONES
+================================ */
+
+.nav-button {
+  padding: 8px 12px;
+
+  font-size: 14px;
+
+  background: var(--nav-btn-bg);
+  color: var(--nav-btn-text);
+
+  border:
+    1px solid var(--nav-btn-border);
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+}
+
+.nav-button:hover {
+  filter: brightness(0.95);
+}
+
+
+/* ACTIVO */
+
+.nav-button.active {
+  background: var(--nav-active-bg);
+  color: var(--nav-active-text);
+
+  border-color:
+    var(--nav-active-bg);
+}
+
+
+/* ================================
+   USUARIO - DERECHA
+================================ */
+
+.nav-user {
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  white-space: nowrap;
+}
+
+
+.nav-email {
+  font-size: 12px;
+
+  color: var(--nav-email);
+}
+
+
+/* ================================
+   CERRAR SESIÓN
+================================ */
+
+.logout-button {
+  padding: 8px 12px;
+
+  font-size: 14px;
+
+  background: var(--logout-bg);
+  color: var(--logout-text);
+
+  border:
+    1px solid var(--logout-border);
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+}
+
+
+/* ================================
+   CONTENIDO
+================================ */
+
+.app-content {
+  width: 100%;
+
+  padding: 10px;
+
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   PANTALLAS PEQUEÑAS
+================================ */
+
+@media (max-width: 800px) {
+
+  .app-navbar {
+    flex-wrap: wrap;
+  }
+
+  .nav-user {
+    width: 100%;
+    margin-left: 0;
+
+    justify-content: flex-end;
+  }
+}
